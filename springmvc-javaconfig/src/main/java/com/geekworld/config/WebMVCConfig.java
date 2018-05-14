@@ -23,7 +23,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"com.geekworld.controllers"})
+@ComponentScan(basePackages= {"com.geekworld.*"})
 public class WebMVCConfig extends WebMvcConfigurerAdapter {
 
 	private static final String MESSAGE_SOURCE = "/WEB-INF/classes/messages";
