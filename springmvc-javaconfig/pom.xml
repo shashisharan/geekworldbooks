@@ -8,18 +8,6 @@
 	<name>springmvc-javaconfig Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<developers>
-		<developer>
-			<id>jsmith</id>
-			<name>Johnathan Marm Smith</name>
-			<email>johnathansmith1969@gmail.com</email>
-			<roles>
-				<role>Architect</role>
-			</roles>
-			<timezone>-5</timezone>
-		</developer>
-	</developers>
-
 	<properties>
 		<java-version>1.8</java-version>
 		<springframework-version>4.2.0.RELEASE</springframework-version>
@@ -63,6 +51,28 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${springframework-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springframework-version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springframework-version}</version>
+		</dependency>
+
 
 
 		<dependency>
