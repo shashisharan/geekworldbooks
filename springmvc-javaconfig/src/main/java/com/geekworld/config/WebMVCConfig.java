@@ -66,18 +66,18 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/resources/").addResourceLocations("/resources/**");
 	}
 
-	@Override
+	/*@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		logger.debug("configureDefaultServletHandling");
 		configurer.enable();
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public void addInterceptors(final InterceptorRegistry registry) {
 		registry.addInterceptor(new LocaleChangeInterceptor());
-	}
+	}*/
 
-	@Bean
+	/*@Bean
 	public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
 		SimpleMappingExceptionResolver b = new SimpleMappingExceptionResolver();
 
@@ -87,5 +87,5 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
 		mappings.put("org.springframework.transaction.TransactionException", "dataAccessFailure");
 		b.setExceptionMappings(mappings);
 		return b;
-	}
+	}*/
 }

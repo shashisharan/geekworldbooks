@@ -1,6 +1,8 @@
-package com.geekworld.security;
+package com.geekworld.secuirtyconfig;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserDao implements UserDaoInterface{
 
 	public Geek_World_User registerUser() {

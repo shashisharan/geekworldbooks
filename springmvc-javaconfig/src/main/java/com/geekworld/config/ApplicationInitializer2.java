@@ -7,7 +7,7 @@ public class ApplicationInitializer2 extends AbstractAnnotationConfigDispatcherS
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] { WebMVCConfig.class };
+		return new Class[] { WebMVCConfig.class};
 	}
 
 	@Override

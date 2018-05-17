@@ -1,4 +1,4 @@
-package com.geekworld.security;
+package com.geekworld.secuirtyconfig;
 
 import java.util.Collection;
 
