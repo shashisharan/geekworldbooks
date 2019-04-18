@@ -1,5 +1,5 @@
-package com.geekworld.config;
-/*package com.johnathanmsmith.mvc.web.config;
+/*package com.geekworld.config;
+
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
