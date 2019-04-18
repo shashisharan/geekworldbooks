@@ -7,6 +7,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import com.geekworld.utils.GeekWorldAuthenticationException;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -29,11 +31,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	}
 
-	@Override
+	/*@Override
 	protected void configure(AuthenticationManagerBuilder auth)
 			throws Exception {
 		auth.authenticationProvider(this.authenticationProvider);
 		super.configure(auth);
+	}*/
+	
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws GeekWorldAuthenticationException{
+		try {
+			//auth.inMemoryAuthentication().withUser("Shashi").password("password");
+			auth.inMemoryAuthentication().withUser("Shashi").password("password").roles("Admin");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			throw new GeekWorldAuthenticationException("Authentication failed");
+		}
+		
 	}
 
 }
