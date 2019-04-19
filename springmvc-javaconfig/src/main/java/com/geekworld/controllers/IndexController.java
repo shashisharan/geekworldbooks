@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.geekworld.serviceimpl.CrudServiceImpl;
 
 @Controller
-@RequestMapping("/ask")
+@RequestMapping("")
 class IndexController {
 	
 	@Autowired
@@ -18,7 +18,7 @@ class IndexController {
 
 	private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value="/saveBook")
     public String displayRequestPage() {
     	crudServiceImpl.saveBook();
         logger.debug("made it to controller");
