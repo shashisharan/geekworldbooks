@@ -1,4 +1,4 @@
-package com.geekworld.hibernateConfig;
+package com.geekworld.hibernateconfig;
 
 import java.util.Properties;
 
@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource({ "classpath:persistence-mysql.properties" })
+@PropertySource({ "classpath:persistence.properties" })
 @ComponentScan({ "com.geekworld.*" })
 public class HibernateConfig {
 	
