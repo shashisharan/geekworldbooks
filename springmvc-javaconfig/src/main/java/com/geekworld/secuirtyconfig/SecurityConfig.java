@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		System.out.println("shashi");
 
-		http.authorizeRequests().antMatchers("/register/**").permitAll().antMatchers("/login/**").permitAll()
+		http.authorizeRequests().antMatchers("/registration/**").permitAll().antMatchers("/login/**").permitAll()
 
 		.antMatchers("/forgotPassword").permitAll()
 				.antMatchers("/forgotUserId").permitAll().anyRequest()

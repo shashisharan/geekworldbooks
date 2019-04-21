@@ -9,7 +9,7 @@ public class AfterLoggedInController {
 	
 	@RequestMapping(value="/welcome")
 	public String getFirstPage(){
-		return "firstPage";
+		return "/firstPage";
 	}
 
 }

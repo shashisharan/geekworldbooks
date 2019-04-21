@@ -22,7 +22,7 @@ class IndexController {
     public String displayRequestPage() {
     	crudServiceImpl.saveBook();
         logger.debug("made it to controller");
-        return "index";
+        return "/index";
 
     }
 

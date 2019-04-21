@@ -10,9 +10,6 @@ public class HomeControllers {
 	
 	@RequestMapping("/login")
 	public String returnLoginPage(){
-		
-		System.out.println("inside homecontroller");
-		
 		return "/login/login";
 	}
 
