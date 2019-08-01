@@ -21,13 +21,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		System.out.println("shashi");
 
-		http.authorizeRequests().antMatchers("/register/**").permitAll()
+		http.authorizeRequests().antMatchers("/registration/**").permitAll().antMatchers("/login/**").permitAll()
 
 		.antMatchers("/forgotPassword").permitAll()
 				.antMatchers("/forgotUserId").permitAll().anyRequest()
-				.authenticated().and().formLogin().loginPage("/login")
-				.permitAll();
+				.authenticated().and().formLogin().loginPage("/login").defaultSuccessUrl("/welcome",true)
+				.permitAll().and().logout().logoutSuccessUrl("/login");
 		// TODO Auto-generated method stub
+		
+/*		if you want to go to a specific url after loogin out just add 
+		.logoutSuccessUrl("/afterlogout.html").
+		Keep in note that logout url: /logout which used to be /j_spring_security_logout.
+		simiary for login it used to be /J_spring_secuirty_login*/
 
 	}
 
